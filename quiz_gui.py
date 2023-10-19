@@ -19,7 +19,7 @@ cap = len(questions)
 def clientThread(client,addr):
     score = 0
     try:
-        client.send('Welcome to the quiz. Please enter your name.'.encode('utf-8'))
+        # client.send('Welcome to the quiz. Please enter your name.'.encode('utf-8'))
         nickname = client.recv(2048).decode('utf-8')
         client.send(('Welcome '+nickname).encode('utf-8'))
         for i in range(0,cap):
